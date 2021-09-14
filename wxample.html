@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="demo">  </p>
+<p id="lorem">  </p>
+<div class="box" style="text-align: center;width: 500px; background-color:whitesmoke; padding: 10px;">
+<div class="box-1" style="border: 2px solid black; margin: 0 auto;">
+    <h1 style="color: red;"> This is my personal card and this is above to below  </h1>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nostrum adipisci eaque. Aut nihil saepe facilis deleniti. Voluptatibus porro numquam quisquam, doloremque alias dignissimos in corrupti architecto maiores iste cumque?
+
+    </p>
+</div>
+
+
+<h1 id="num" style="color: #000;"> </h1>
+
+
+</div>
+
+
+
+
+<script>
+
+
+
+    var lorem = document.getElementById("lorem");
+var h = window.innerHeight
+document.documentElement.clientHeight;
+
+var w = window.innerWidth
+document.documentElement.clientWidth;
+
+
+var p = document.getElementById("demo").innerHTML="page ki height" + " " + h + "<br/>"+ "page ki width"+ " "  + w;
+
+
+
+var bounding = document.querySelector(".box");
+var boundings = bounding.getBoundingClientRect().right;
+var left = bounding.getBoundingClientRect().left;
+var right = bounding.getBoundingClientRect().right;
+var tops = bounding.getBoundingClientRect().top;
+var bottom = bounding.getBoundingClientRect().bottom;
+// lorem.innerHTML="ye hai " + boundings;
+lorem.innerHTML= "Right " + " :" +  right + "px" + "<br/>" + "Left " + ":"  +  left + "px"  + "<br/>" + "top " + ":"+ tops + "px" + "<br/>"  + "bottom " + ":" + bottom; 
+
+// var time = setInterval(myfun,800);
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

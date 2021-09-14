@@ -67,10 +67,11 @@ left.addEventListener('click' , function() {
 
 
 // --- number animation ---------------
+ var project = setInterval(projectdone,30)
 
-var project = setInterval(projectdone,20)
-var count1 =0;
+ var count1 = 0;
 function projectdone(){
+
     count1++;
     document.querySelector("#number1").innerHTML=count1;
     if(count1==45){
@@ -78,26 +79,44 @@ clearInterval(project)
     }
 }
 // --- number animation-2  ----
-var project1 = setInterval(projectdone1,50)
-var count2 = 0;
-function projectdone1(){
-    count2++;
-    document.querySelector("#number2").innerHTML=count2;
-    if(count2==16){
-clearInterval(project1)
-    }
-}
+// var project1 = setInterval(projectdone1,50)
+// var count2 = 0;
+// function projectdone1(){
+//     count2++;
+//     document.querySelector("#number2").innerHTML=count2;
+//     if(count2==16){
+// clearInterval(project1)
+//     }
+// }
 // ----- number animation-3 -----
-var project2 = setInterval(projectdone2,20)
-var count3 =0;
-function projectdone2(){
-    count3++;
-    document.querySelector("#number3").innerHTML=count3;
-    if(count3==35){
-clearInterval(project2)
-    }
-}
+// var project2 = setInterval(projectdone2,20)
+// var count3 =0;
+// function projectdone2(){
+//     count3++;
+//     document.querySelector("#number3").innerHTML=count3;
+//     if(count3==35){
+// clearInterval(project2)
+//     }
+// }
 // ----- number animation complete-----
 
+
+// scroll animation start --
+var count1 =0;
+window.addEventListener('scroll',()=>{
+    let content = document.querySelector('.num-row');
+    let contentPosition = content.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight / 1.6;
+    if(contentPosition<screenPosition){
+content.classList.add("active");
+
+    }
+ 
+
+ else {
+    clearInterval(project)
+     content.classList.remove("active");
+ }
+});
 
 
